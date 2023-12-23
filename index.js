@@ -28,9 +28,9 @@ const addToStatistics = async (request, response, next) => {
 
 const saveData = async (request, response, next) => {
   try {
-    const oldData = await readFile("./db/data.js", "utf-8");
+    const oldData = await readFile("./db/data.txt", "utf-8");
     const newData = await request.body;
-    await writeFile("./db/data.js", `${oldData}\n \n${newData}`);
+    await writeFile("./db/data.txt", `${oldData}\n \n${newData}`);
   } catch (error) {
     console.log(error.message);
     throw error;
@@ -40,7 +40,7 @@ const saveData = async (request, response, next) => {
 
 const loadData = async (request, response, next) => {
   try {
-    const data = await readFile("./db/data.js", "utf-8");
+    const data = await readFile("./db/data.txt", "utf-8");
     await response.send(data);
   } catch (error) {
     console.log(error.message);
