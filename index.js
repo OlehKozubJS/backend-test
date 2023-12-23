@@ -26,11 +26,10 @@ const addToStatistics = async (request, response, next) => {
 
 const saveData = async (request, response, next) => {
   try {
-    console.log(request);
     //const oldData = await readFile("./db/data.txt", "utf-8");
     //const newData = await request;
     //await writeFile("./db/data.txt", `${oldData}\n \n${newData}`);
-    response.send("Hi! This is response from backend!");
+    response.send(request);
   } catch (error) {
     console.log(error.message);
     throw error;
