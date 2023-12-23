@@ -50,6 +50,7 @@ const loadData = async (request, response, next) => {
 };
 
 application.use(cors());
+application.use(addToStatistics);
 
 application.get("/save", saveData);
 application.get("/load", loadData);
