@@ -8,6 +8,24 @@ const applicationRun = () => {
   console.log("Server is running at 3000 port");
 };
 
+const addToStatistics = async (request, response, next) => {
+  try {
+    const { url, method } = request;
+    const oldStatsData = await readFile("./db/statistics.txt", "utf-8");
+    const newStatsData = `date: ${
+      new Date().toString
+    }, url: ${url}, method: ${method}`;
+    await writeFile(
+      "./db/statistics.txt",
+      `${oldStatsData}\n \n${newStatsData}`
+    );
+  } catch (error) {
+    console.log(error.message);
+    throw error;
+  }
+  next();
+};
+
 const saveData = async (request, response, next) => {
   try {
     const oldData = await readFile("./db/data.js", "utf-8");
