@@ -26,10 +26,9 @@ const addToStatistics = async (request, response, next) => {
 
 const saveData = async (request, response, next) => {
   try {
-    //const oldData = await readFile("./db/data.txt", "utf-8");
-    //const newData = await request;
-    //await writeFile("./db/data.txt", `${oldData}\n \n${newData}`);
-    response.send(request);
+    const oldData = await readFile("./db/data.txt", "utf-8");
+    const newData = await request;
+    await writeFile("./db/data.txt", `${oldData}\n \n${newData}`);
   } catch (error) {
     console.log(error.message);
     throw error;
@@ -51,7 +50,7 @@ const loadData = async (request, response, next) => {
 application.use(cors());
 application.use(addToStatistics);
 
-application.get("/save", saveData);
+application.post("/save", saveData);
 application.get("/load", loadData);
 
 application.listen(3000, applicationRun);
