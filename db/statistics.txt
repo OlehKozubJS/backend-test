@@ -1,3 +1,41 @@
-Statistics:
+
  
-date: Sat Dec 23 2023 22:10:38 GMT+0200 (за східноєвропейським стандартним часом), url: /load, method: GET
+date: Sat Dec 23 2023 22:27:16 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: POST
+ 
+date: Sat Dec 23 2023 22:27:16 GMT+0200 (за східноєвропейським стандартним часом), url: /load, method: GET
+ 
+date: Sat Dec 23 2023 22:27:21 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: POST
+ 
+date: Sat Dec 23 2023 22:27:21 GMT+0200 (за східноєвропейським стандартним часом), url: /load, method: GET
+ 
+date: Sat Dec 23 2023 22:28:29 GMT+0200 (за східноєвропейським стандартним часом), url: /load, method: GET
+ 
+date: Sat Dec 23 2023 22:28:29 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: POST
+ 
+date: Sat Dec 23 2023 22:28:30 GMT+0200 (за східноєвропейським стандартним часом), url: /load, method: GET
+ 
+date: Sat Dec 23 2023 22:28:30 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: POST
+ 
+date: Sat Dec 23 2023 22:28:30 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: POST
+ 
+date: Sat Dec 23 2023 22:28:30 GMT+0200 (за східноєвропейським стандартним часом), url: /load, method: GET
+ 
+date: Sat Dec 23 2023 22:28:33 GMT+0200 (за східноєвропейським стандартним часом), url: /load, method: GET
+ 
+date: Sat Dec 23 2023 22:28:33 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: POST
+ 
+date: Sat Dec 23 2023 23:14:32 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: GET
+ 
+date: Sat Dec 23 2023 23:15:46 GMT+0200 (за східноєвропейським стандартним часом), url: /load, method: GET
+ 
+date: Sat Dec 23 2023 23:15:46 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: POST
+ 
+date: Sat Dec 23 2023 23:16:03 GMT+0200 (за східноєвропейським стандартним часом), url: /load, method: GET
+ 
+date: Sat Dec 23 2023 23:16:03 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: POST
+ 
+date: Sat Dec 23 2023 23:16:03 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: POST
+ 
+date: Sat Dec 23 2023 23:16:03 GMT+0200 (за східноєвропейським стандартним часом), url: /load, method: GET
+ 
+date: Sat Dec 23 2023 23:16:30 GMT+0200 (за східноєвропейським стандартним часом), url: /save, method: POST
