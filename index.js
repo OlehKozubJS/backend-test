@@ -9,10 +9,20 @@ const applicationRun = () => {
 };
 
 const saveData = (request, response, next) => {
+  try {
+  } catch (error) {
+    console.log(error.message);
+    throw error;
+  }
   next();
 };
 
 const loadData = (request, response, next) => {
+  try {
+  } catch (error) {
+    console.log(error.message);
+    throw error;
+  }
   next();
 };
 
