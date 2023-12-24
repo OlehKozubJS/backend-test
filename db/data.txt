@@ -31,6 +31,3 @@ Hope
 name: Gomamon
 message: 
 Sincerity
- 
-name: 
-message: 
