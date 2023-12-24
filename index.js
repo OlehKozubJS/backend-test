@@ -34,7 +34,7 @@ const saveData = async (request, response, next) => {
   try {
     const oldData = await readFile("./db/data.txt", "utf-8");
     const body = await request.body;
-    const newData = await body.newData;
+    const newData = JSON.stringify(body);
     if (newData) {
       await writeFile("./db/data.txt", `${oldData}\n \n${newData}`);
     }
