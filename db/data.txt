@@ -19,3 +19,11 @@ Love
 name: Tailmon
 message: 
 Light
+ 
+name: Patamon
+message: 
+Hope
+ 
+name: Patamon
+message: 
+Hope
