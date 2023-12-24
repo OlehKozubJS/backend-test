@@ -13,7 +13,11 @@ const addToStatistics = async (request, response, next) => {
   try {
     const { url, method } = request;
     const oldStatsData = await readFile("./db/statistics.txt", "utf-8");
-    const newStatsData = `date: ${new Date().toString()}, url: ${url}, method: ${method}`;
+    const newStatsData = {
+      date: new Date().toString(),
+      url: url,
+      method: method,
+    };
     await writeFile(
       "./db/statistics.txt",
       `${oldStatsData}\n \n${newStatsData}`
