@@ -33,6 +33,7 @@ const saveData = async (request, response, next) => {
     if (newData) {
       await writeFile("./db/data.txt", `${oldData}\n \n${newData}`);
     }
+    response.send(`This is response from backend! ${newData}`);
   } catch (error) {
     console.log(error.message);
     throw error;
