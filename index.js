@@ -53,7 +53,7 @@ const loadData = async (request, response, next) => {
 };
 
 application.use(cors());
-application.use(bp.json({ extended: true }));
+application.use(bp.json());
 application.use(addToStatistics);
 
 application.post("/save", saveData);
