@@ -1,10 +1,13 @@
 
  
-
- 
-
- 
 name: Agumon
 message: 
-I am Agumon! Good Night!
+Courage
  
+name: Gabumon
+message: 
+Friendship
+ 
+name: Byomon
+message: 
+Love
