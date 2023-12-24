@@ -1,33 +1,5 @@
 
  
-name: Agumon
-message: 
-Courage
+{}
  
-name: Gabumon
-message: 
-Friendship
- 
-name: Byomon
-message: 
-Love
- 
-name: Byomon
-message: 
-Love
- 
-name: Tailmon
-message: 
-Light
- 
-name: Patamon
-message: 
-Hope
- 
-name: Patamon
-message: 
-Hope
- 
-name: Gomamon
-message: 
-Sincerity
+{}
