@@ -1,9 +1,11 @@
-Data:
-
 
  
-undefined
+
  
-[object Object]
+name: Oleh
+message
+Hello, Guys!
  
-[object Object]
+name: Oleh
+message
+Hello, Guys
