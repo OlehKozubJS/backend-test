@@ -27,3 +27,10 @@ Hope
 name: Patamon
 message: 
 Hope
+ 
+name: Gomamon
+message: 
+Sincerity
+ 
+name: 
+message: 
