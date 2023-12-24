@@ -11,3 +11,11 @@ Friendship
 name: Byomon
 message: 
 Love
+ 
+name: Byomon
+message: 
+Love
+ 
+name: Tailmon
+message: 
+Light
