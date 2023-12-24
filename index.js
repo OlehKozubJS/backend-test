@@ -18,9 +18,10 @@ const addToStatistics = async (request, response, next) => {
       url: url,
       method: method,
     };
+    const newStatsDataString = JSON.stringify(newStatsData);
     await writeFile(
       "./db/statistics.txt",
-      `${oldStatsData}\n \n${newStatsData}`
+      `${oldStatsData}\n \n${newStatsDataString}`
     );
   } catch (error) {
     console.log(error.message);
