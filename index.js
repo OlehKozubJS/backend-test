@@ -37,7 +37,7 @@ const saveData = async (request, response, next) => {
     const body = await request.body;
     const newData = [...oldData, body];
     const newDataString = JSON.stringify(newData);
-    await writeFile("./db/data.txt", newDataString);
+    await writeFile("../messages.txt", newDataString);
     response.send(body);
   } catch (error) {
     console.log(error.message);
