@@ -48,7 +48,7 @@ const saveData = async (request, response, next) => {
 
 const loadData = async (request, response, next) => {
   try {
-    const data = await readFile("./db/data.txt", "utf-8");
+    const data = await readFile("../messages.txt", "utf-8");
     await response.send(data);
   } catch (error) {
     console.log(error.message);
