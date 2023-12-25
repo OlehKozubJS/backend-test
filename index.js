@@ -4,10 +4,6 @@ import bodyParser from "body-parser";
 
 const application = express();
 
-const applicationRun = () => {
-  console.log("Server is running at 3000 port");
-};
-
 application.use(cors());
 application.use(bodyParser.json());
 application.use(addToStatistics);
