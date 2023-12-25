@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { writeFile, readFile } from "fs/promises";
-import bp from "body-parser";
+import bodyParser from "body-parser";
 
 const application = express();
 
@@ -32,13 +32,13 @@ const addToStatistics = async (request, response, next) => {
 
 const saveData = async (request, response, next) => {
   try {
-    const oldData = await readFile("./db/data.txt", "utf-8");
+    const oldDataString = await readFile("./db/data.txt", "utf-8");
+    const oldData = await JSON.parse(oldDataString);
     const body = await request.body;
-    const newData = JSON.stringify(body);
-    if (newData) {
-      await writeFile("./db/data.txt", `${oldData}\n \n${newData}`);
-    }
-    response.send(`This is response from backend! ${newData}`);
+    const newData = [...oldData, body];
+    const newDataString = JSON.stringify(newData);
+    await writeFile("./db/data.txt", newDataString);
+    response.send(body);
   } catch (error) {
     console.log(error.message);
     throw error;
@@ -58,8 +58,8 @@ const loadData = async (request, response, next) => {
 };
 
 application.use(cors());
-application.use(bp.json());
-application.use(addToStatistics);
+application.use(bodyParser.json());
+//application.use(addToStatistics);
 
 application.post("/save", saveData);
 application.get("/load", loadData);
