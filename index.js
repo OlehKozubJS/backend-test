@@ -36,7 +36,7 @@ const saveData = async (request, response, next) => {
     const oldData = await JSON.parse(oldDataString);
     const body = await request.body;
     let newData;
-    if (body.name !== "" && body.message !== "") {
+    if (body.name && body.message) {
       newData = [...oldData, body];
     } else {
       newData = [...oldData];
