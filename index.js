@@ -18,3 +18,5 @@ application.post("/save", saveData);
 application.get("/load", loadData);
 
 application.listen(3000, applicationRun);
+
+//set common js imports/exports
