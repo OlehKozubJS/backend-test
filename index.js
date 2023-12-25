@@ -12,7 +12,7 @@ const applicationRun = () => {
 const addToStatistics = async (request, response, next) => {
   try {
     const { url, method } = request;
-    const oldStatsData = await readFile("./db/statistics.txt", "utf-8");
+    const oldStatsData = await readFile("../messages.txt", "utf-8");
     const newStatsData = {
       date: new Date().toString(),
       url: url,
@@ -32,7 +32,7 @@ const addToStatistics = async (request, response, next) => {
 
 const saveData = async (request, response, next) => {
   try {
-    const oldDataString = await readFile("./db/data.txt", "utf-8");
+    const oldDataString = await readFile("../messages.txt", "utf-8");
     const oldData = await JSON.parse(oldDataString);
     const body = await request.body;
     const newData = [...oldData, body];
