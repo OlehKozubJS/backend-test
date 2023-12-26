@@ -1,6 +1,6 @@
 const { writeFile, readFile } = require("fs/promises");
 
-const saveData = async (request, response, next) => {
+const removeData = async (request, response, next) => {
   try {
     const oldDataString = await readFile("../messages.txt", "utf-8");
     const oldData = await JSON.parse(oldDataString);
@@ -19,4 +19,4 @@ const saveData = async (request, response, next) => {
   next();
 };
 
-module.exports = { saveData };
+module.exports = { removeData };
