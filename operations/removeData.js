@@ -9,12 +9,12 @@ const removeData = async (request, response, next) => {
     const newData = oldData.filter((message) => {
       message.messageIndex !== messageIndex;
     });
-    const deletedData = oldData.find(() => {
+    const deletedMessage = oldData.find(() => {
       message.messageIndex === messageIndex;
     });
     const newDataString = JSON.stringify(newData);
     await writeFile("../messages.txt", newDataString);
-    response.send(deletedData);
+    response.send(deletedMessage);
   } catch (error) {
     console.log(error.message);
     throw error;
