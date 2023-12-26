@@ -6,8 +6,11 @@ const removeData = async (request, response, next) => {
     const oldData = await JSON.parse(oldDataString);
     const params = await request.params;
     const { messageIndex } = params;
-    const newData = oldData.map((message) => {
+    const newData = oldData.filter((message) => {
       message.messageIndex !== messageIndex;
+    });
+    const deletedData = oldData.find(() => {
+      message.messageIndex === messageIndex;
     });
     const newDataString = JSON.stringify(newData);
     await writeFile("../messages.txt", newDataString);
