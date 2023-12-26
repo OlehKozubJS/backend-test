@@ -14,7 +14,7 @@ const removeData = async (request, response, next) => {
     });
     const newDataString = JSON.stringify(newData);
     await writeFile("../messages.txt", newDataString);
-    response.send(body);
+    response.send(deletedData);
   } catch (error) {
     console.log(error.message);
     throw error;
