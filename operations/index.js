@@ -1,6 +1,6 @@
-import { addToStatistics } from "./addToStatistics";
-import { saveData } from "./saveData";
-import { loadData } from "./loadData";
-import { applicationRun } from "./applicationRun";
+const { addToStatistics } = require("./addToStatistics");
+const { saveData } = require("./saveData");
+const { loadData } = require("./loadData");
+const { applicationRun } = require("./applicationRun");
 
-export { addToStatistics, loadData, saveData, applicationRun };
+module.exports = { addToStatistics, loadData, saveData, applicationRun };

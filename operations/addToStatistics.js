@@ -1,4 +1,4 @@
-import { writeFile, readFile } from "fs/promises";
+const { writeFile, readFile } = require("fs/promises");
 
 const addToStatistics = async (request, response, next) => {
   try {
@@ -21,4 +21,4 @@ const addToStatistics = async (request, response, next) => {
   next();
 };
 
-export { addToStatistics };
+module.exports = { addToStatistics };

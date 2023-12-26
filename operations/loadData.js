@@ -1,4 +1,4 @@
-import { readFile } from "fs/promises";
+const { readFile } = require("fs/promises");
 
 const loadData = async (request, response, next) => {
   try {
@@ -11,4 +11,4 @@ const loadData = async (request, response, next) => {
   next();
 };
 
-export { loadData };
+module.exports = { loadData };

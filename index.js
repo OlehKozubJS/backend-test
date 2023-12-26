@@ -1,12 +1,12 @@
-import express from "express";
-import cors from "cors";
-import bodyParser from "body-parser";
-import {
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const {
   addToStatistics,
   saveData,
   loadData,
   applicationRun,
-} from "./operations";
+} = require("./operations");
 
 const application = express();
 

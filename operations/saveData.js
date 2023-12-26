@@ -1,4 +1,4 @@
-import { writeFile, readFile } from "fs/promises";
+const { writeFile, readFile } = require("fs/promises");
 
 const saveData = async (request, response, next) => {
   try {
@@ -21,4 +21,4 @@ const saveData = async (request, response, next) => {
   next();
 };
 
-export { saveData };
+module.exports = { saveData };
