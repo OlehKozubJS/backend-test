@@ -5,6 +5,7 @@ const {
   addToStatistics,
   saveData,
   loadData,
+  removeData,
   applicationRun,
 } = require("./operations");
 
@@ -16,6 +17,7 @@ application.use(addToStatistics);
 
 application.post("/save", saveData);
 application.get("/load", loadData);
+application.delete("/remove/:messageIndex", removeData);
 
 application.listen(3000, applicationRun);
 
