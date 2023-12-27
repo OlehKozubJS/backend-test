@@ -10,6 +10,9 @@ const addToStatistics = async (request, response, next) => {
       method: method,
     };
     const newStatsDataString = JSON.stringify(newStatsData);
+    if (false) {
+      return;
+    }
     await writeFile(
       "./db/statistics.txt",
       `${oldStatsData}\n \n${newStatsDataString}`
