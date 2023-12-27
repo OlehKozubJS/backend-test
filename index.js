@@ -17,7 +17,7 @@ application.use(bodyParser.json());
 
 application.post("/save", saveData);
 application.get("/load", loadData);
-application.delete("/remove/:messageIndex", removeData);
+application.delete("/remove", removeData);
 
 application.listen(3000, applicationRun);
 
