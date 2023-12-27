@@ -9,7 +9,7 @@ const removeData = async (request, response, next) => {
     const newData = oldData.filter((message) => {
       message.messageIndex !== messageIndex;
     });
-    const deletedMessage = oldData.find(() => {
+    const deletedMessage = oldData.find((message) => {
       message.messageIndex === messageIndex;
     });
     const newDataString = JSON.stringify(newData);
