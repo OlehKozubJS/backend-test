@@ -25,3 +25,8 @@ application.listen(3000, applicationRun);
 //set delete export + set local frontend
 //switch off adding to statistics
 //switch on adding to statistics
+//http://localhost:3000/load
+//http://localhost:3000/save
+//http://localhost:3000/remove
+//http://localhost:3000/add
+//http://localhost:3000/load
