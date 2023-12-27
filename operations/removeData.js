@@ -2,7 +2,6 @@ const { writeFile, readFile } = require("fs/promises");
 
 const removeData = async (request, response, next) => {
   try {
-    /*
     const oldDataString = await readFile("../messages.txt", "utf-8");
     const oldData = await JSON.parse(oldDataString);
     const { params } = await request;
@@ -18,9 +17,8 @@ const removeData = async (request, response, next) => {
     response.send(
       `deleed mesage: ${deletedMessage}, full data: ${newDataString}`
     );
-    */
 
-    response.send("<p>This is response from delte method</p>");
+    response.status(204).send("<p>This is response from delte method</p>");
   } catch (error) {
     console.log(error.message);
     throw error;
