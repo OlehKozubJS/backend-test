@@ -22,3 +22,4 @@ application.delete("/remove/:messageIndex", removeData);
 application.listen(3000, applicationRun);
 
 //set common js imports/exports
+//set delete export + set local frontend
