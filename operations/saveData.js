@@ -19,7 +19,7 @@ const saveData = async (request, response, next) => {
     }
     const newDataString = JSON.stringify(newData);
     await writeFile("../messages.txt", newDataString);
-    response.send(body);
+    response.send(`request body: ${body}, full data: ${newDataString}`);
   } catch (error) {
     console.log(error.message);
     throw error;
