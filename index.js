@@ -1,13 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const {
-  /*addToStatistics,*/
+/*const {
+  addToStatistics,
   saveData,
   loadData,
-  /*removeData,*/
+  removeData,
   applicationRun,
-} = require("./operations");
+} = require("./operations");*/
 
 const application = express();
 
@@ -15,17 +15,49 @@ application.use(cors());
 application.use(bodyParser.json());
 //application.use(addToStatistics);
 
-application.post("/save", saveData);
-application.get("/load", loadData);
-application.delete("/remove", (request, response, next) => {
-  const { params } = request;
-  const { config } = params;
-  //const { messageIndex } = config;
-  response.send(config);
-  next();
-});
+const tryCatcher = (callback) => {
+  const newFunction = async (request, response, next) => {
+    try {
+      await callback();
+    } catch (error) {
+      console.log(error);
+      throw error;
+    } finally {
+      next();
+    }
+  };
+  return newFunction;
+};
 
-application.listen(3000, applicationRun);
+application.post(
+  "/save",
+  tryCatcher(async (request, response) => {
+    //const { params } = request;
+    //const { config } = params;
+    //const { messageIndex } = config;
+    await response.send(request);
+  })
+);
+application.get(
+  "/load",
+  tryCatcher(async (request, response) => {
+    //const { params } = request;
+    //const { config } = params;
+    //const { messageIndex } = config;
+    response.send(request);
+  })
+);
+application.delete(
+  "/remove",
+  tryCatcher(async (request, response) => {
+    //const { params } = request;
+    //const { config } = params;
+    //const { messageIndex } = config;
+    response.send(request);
+  })
+);
+
+application.listen(3000, () => "Server is running at 3000 port");
 
 //set common js imports/exports
 //set delete export + set local frontend
