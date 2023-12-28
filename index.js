@@ -19,7 +19,9 @@ application.post("/save", saveData);
 application.get("/load", loadData);
 application.delete("/remove", (request, response, next) => {
   const { params } = request;
-  response.send(params);
+  const { config } = params;
+  //const { messageIndex } = config;
+  response.send(config);
   next();
 });
 
