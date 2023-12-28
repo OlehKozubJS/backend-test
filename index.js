@@ -5,7 +5,7 @@ const {
   /*addToStatistics,*/
   saveData,
   loadData,
-  removeData,
+  /*removeData,*/
   applicationRun,
 } = require("./operations");
 
