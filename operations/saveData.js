@@ -6,7 +6,7 @@ const saveData = async (request, response, next) => {
     //const oldData = await JSON.parse(oldDataString);
     const body = await request.body;
     let messageIndex = 0;
-    oldData.forEach((message) => {
+    oldDataString.forEach((message) => {
       if (messageIndex === message.messageIndex) {
         messageIndex += 1;
       }
