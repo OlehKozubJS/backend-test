@@ -1,63 +1,40 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-/*const {
-  addToStatistics,
+const {
+  //addToStatistics,
   saveData,
   loadData,
   removeData,
   applicationRun,
-} = require("./operations");*/
+} = require("./operations");
 
 const application = express();
 
 application.use(cors());
 application.use(bodyParser.json());
 //application.use(addToStatistics);
-
+/*
 const tryCatcher = (callback) => {
   const newFunction = async (request, response, next) => {
     try {
-      await callback();
+      await callback(request, response, next);
     } catch (error) {
-      console.log(error);
-      throw error;
-    } finally {
-      next();
+      next(error);
     }
   };
   return newFunction;
-};
+};*/
 
-application.post(
-  "/save",
-  tryCatcher(async (request, response) => {
-    //const { params } = request;
-    //const { config } = params;
-    //const { messageIndex } = config;
-    await response.send(request);
-  })
-);
-application.get(
-  "/load",
-  tryCatcher(async (request, response) => {
-    //const { params } = request;
-    //const { config } = params;
-    //const { messageIndex } = config;
-    response.send(request);
-  })
-);
-application.delete(
-  "/remove",
-  tryCatcher(async (request, response) => {
-    //const { params } = request;
-    //const { config } = params;
-    //const { messageIndex } = config;
-    response.send(request);
-  })
-);
+application.post("/save", saveData);
+application.get("/load", loadData);
+application.delete("/remove/:messageToDeleteId", removeData);
 
-application.listen(3000, () => "Server is running at 3000 port");
+application.listen(3000, applicationRun);
+
+//const { params } = request;
+//const { config } = params;
+//const { messageIndex } = config;
 
 //set common js imports/exports
 //set delete export + set local frontend
