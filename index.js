@@ -17,7 +17,11 @@ application.use(bodyParser.json());
 
 application.post("/save", saveData);
 application.get("/load", loadData);
-application.delete("/remove", removeData);
+application.delete("/remove", (request, response, next) => {
+  const { params } = request;
+  response.send(params);
+  next();
+});
 
 application.listen(3000, applicationRun);
 
