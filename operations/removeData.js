@@ -14,11 +14,9 @@ const removeData = async (request, response, next) => {
     });
     const newDataString = JSON.stringify(newData);
     await writeFile("../messages.txt", newDataString);
-    response.send(
-      `deleed mesage: ${deletedMessage}, full data: ${newDataString}`
-    );
-
-    response.status(204).send("<p>This is response from delte method</p>");
+    response
+      .status(204)
+      .send(`deleed mesage: ${deletedMessage}, full data: ${newDataString}`);
   } catch (error) {
     console.log(error.message);
     throw error;
