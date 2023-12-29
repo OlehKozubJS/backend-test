@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const {
-  //addToStatistics,
+  addToStatistics,
   saveData,
   loadData,
   removeData,
@@ -37,7 +37,8 @@ application.listen(3000, applicationRun);
 //const { messageIndex } = config;
 
 //set common js imports/exports
-//set delete export + set local frontend
+//set delete export
+//set controllers
 //switch off adding to statistics
 //switch on adding to statistics
 //http://localhost:3000/load
