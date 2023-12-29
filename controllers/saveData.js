@@ -3,7 +3,7 @@ const { tryCatcher } = require("./tryCatcher");
 
 const saveData = async (request, response, next) => {
   const data = await readFile("../../messages.txt", "utf-8");
-  response.send(data);
+  await response.send(data);
 };
 
 module.exports = { saveData: tryCatcher(saveData) };
