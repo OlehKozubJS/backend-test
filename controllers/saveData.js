@@ -2,7 +2,7 @@ const { writeFile, readFile } = require("fs/promises");
 const { tryCatcher } = require("./tryCatcher");
 
 const saveData = async (request, response, next) => {
-  const data = readFile("../../messages.txt", "utf-8");
+  const data = await readFile("../../messages.txt", "utf-8");
   response.send(data);
 };
 
