@@ -10,13 +10,13 @@ const {
   applicationRun,
 } = require("./operations");
 /* */
-const { saveData, applicationRun } = require("./controllers");
+const { loadData, applicationRun } = require("./controllers");
 /* */
 const application = express();
 application.use(cors());
 application.use(bodyParser.json());
 //application.use(addToStatistics);
-application.post("/save", saveData);
-//application.get("/load", loadData);
+//application.post("/save", saveData);
+application.get("/load", loadData);
 //application.delete("/remove/:messageToDeleteId", removeData);
 application.listen(3000, applicationRun);
