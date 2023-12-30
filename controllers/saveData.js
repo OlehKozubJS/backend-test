@@ -1,5 +1,5 @@
 const { writeFile, readFile } = require("fs/promises");
-const { tryCatcher } = require("./tryCatcher");
+const { tryCatcher } = require("../hooks/tryCatcher");
 
 const saveData = async (request, response, next) => {
   const data = await readFile("../../messages.txt", "utf-8");
