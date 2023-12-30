@@ -1,7 +1,8 @@
-const { tryCatcher } = require("../hooks/tryCatcher");
+const { loadFromFile } = require("../hooks");
 
 const loadData = async (request, response) => {
+  const data = loadFromFile("statistics");
   await response.send(JSON.stringify(data));
 };
 
-module.exports = { loadData: tryCatcher(loadData) };
+module.exports = { loadData };
