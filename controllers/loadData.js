@@ -1,9 +1,16 @@
 const { writeFile, readFile } = require("fs/promises");
-const { tryCatcher } = require("./tryCatcher");
+//const { tryCatcher } = require("./tryCatcher");
 
 const loadData = async (request, response, next) => {
-  const data = await readFile("../../messages.txt", "utf-8");
-  await response.send(data);
+  try {
+    const data = await readFile("../db/statistics.txt", "utf-8");
+    await response.send(JSON.stringify(data));
+  } catch (error) {
+    console.log(error);
+    throw error;
+  } finally {
+    next();
+  }
 };
 
-module.exports = { loadData: tryCatcher(loadData) };
+module.exports = { loadData };
