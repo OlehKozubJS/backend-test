@@ -3,7 +3,7 @@ const { resolve } = require("path");
 const { tryCatcher } = require("./tryCatcher");
 
 const loadData = async (request, response) => {
-  const filePath = resolve("db", "data.txt");
+  const filePath = resolve("db", "messages.txt");
   const data = await readFile(filePath, "utf-8");
   await response.send(JSON.stringify(data));
 };
