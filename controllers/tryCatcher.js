@@ -1,7 +1,7 @@
 const tryCatcher = (callback) => {
   const newFunction = async (request, response, next) => {
     try {
-      await callback(request, response, next);
+      await callback(request, response);
     } catch (error) {
       console.log(error);
       throw error;
