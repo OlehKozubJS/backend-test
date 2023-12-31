@@ -4,6 +4,6 @@ const { saveToFile } = require("./saveToFile");
 
 module.exports = {
   tryCatcher,
-  loadFromFile: tryCatcher(loadFromFile),
-  saveToFile: tryCatcher(saveToFile),
+  loadFromFile,
+  saveToFile,
 };

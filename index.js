@@ -1,22 +1,22 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-/* *
+
 const {
-  addToStatistics,
-  saveData,
   loadData,
+  saveData,
   removeData,
   applicationRun,
-} = require("./operations");
-/* */
-const { loadData, applicationRun } = require("./controllers");
-/* */
+} = require("./controllers");
+
 const application = express();
+
 application.use(cors());
 application.use(bodyParser.json());
 //application.use(addToStatistics);
-//application.post("/save", saveData);
+
+application.post("/save", saveData);
 application.get("/load", loadData);
-//application.delete("/remove/:messageToDeleteId", removeData);
+application.delete("/remove/:id", removeData);
+
 application.listen(3000, applicationRun);
